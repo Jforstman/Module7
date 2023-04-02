@@ -1,0 +1,37 @@
+<html>
+  
+  <body>
+    <script>
+      window.onload = function () {
+        var time = 10;
+        const getTime = () => {
+          time = time - 1;
+        const slot = document.getElementById("div1");
+        slot.innerHTML = "Hello World!  The page will turn red in " + time + " secs";
+        };
+        const myInterval = setInterval(getTime, 1000);
+        if (time <= 0) {
+            clearInterval(myInterval);
+            colorChange();
+          };
+      }
+        
+        
+        
+       
+      
+      /*clearInterval(myInterval);
+      document.body.style.backgroundColor = "red";*/
+      
+      function colorChange() {
+          document.body.style.backgroundColor = "red";
+        };
+    
+        
+    </script>
+    <div>
+      <h1 id="div1"></h1>
+    </div>
+  
+  </body>
+</html>
